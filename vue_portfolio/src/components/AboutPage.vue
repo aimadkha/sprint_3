@@ -1,10 +1,17 @@
 <template>
   <section class="about">
     <div id="about__heading" class="container">
-      <p class="display-4 mt-5 mb-0">ABOUT ME</p>
+      <p
+        id="about__head"
+        class="display-4 mt-5 mb-0"
+        v-animate-onscroll="'animate__heartBeat'"
+      >
+        ABOUT ME
+      </p>
       <span class="mt-0">HOPE TO KNOW YOU AFTER</span>
       <hr id="about__line" class="w-25 bg-dark" />
-      <img id="about__img" src="@/assets/photo.jpg" alt="" class="w-25" />
+      <img id="about__img" src="@/assets/photo.jpg" alt="" class="m-3" />
+
       <div class="row">
         <div class="about__content col-md-8">
           <h5 class="text-uppercase font-weight-bold text-md-left">who am i</h5>
@@ -58,19 +65,41 @@
         </div>
       </div>
     </div>
-    <div v-animate-onscroll="'animate__animated animate__bounce'">
-      Animate me once upon scroll
-    </div>
   </section>
 </template>
 
 <script>
-export default {};
+import anime from "animejs";
+
+export default {
+  methods: {
+    go() {
+      anime({
+        targets: "#about__head",
+        color: "#FF0000",
+        easing: "linear",
+        delay: 100,
+        duration: 600,
+      }),
+        anime({
+          targets: "#about__img",
+          translateX: -1100,
+          easing: "easeInOutQuad",
+        });
+    },
+  },
+  mounted() {
+    this.go();
+  },
+};
 </script>
 
 <style>
 #about__img {
   border-radius: 50%;
+  width: 8rem;
+  position: relative;
+  left: 100%;
 }
 .about__text {
   color: #3c6e71;

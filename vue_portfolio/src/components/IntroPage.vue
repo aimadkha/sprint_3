@@ -4,10 +4,7 @@
     class="container-fluid d-flex jusctidy-content-center align-items-center"
   >
     <div id="intro__content" class="container w-80 col-sm-8 col-lg-5">
-      <h1
-        id="intro__heading"
-        class="text-white animate__animated animate__backInUp"
-      >
+      <h1 id="intro__heading" class="line animate__animated animate__backInUp">
         {{ fullName }}
       </h1>
       <div id="intro__line" class="w-80 bg-white my-5"></div>
@@ -19,6 +16,7 @@
 </template>
 
 <script>
+import anime from "animejs";
 export default {
   name: "intro",
   data() {
@@ -26,6 +24,21 @@ export default {
       fullName: "Aimad Elkhattabi",
       job: "Web Devloper",
     };
+  },
+  methods: {
+    go() {
+      anime({
+        targets: ".line",
+        transformY: 200,
+        color: "#ffF",
+        easing: "linear",
+        delay: 800,
+        duration: 200,
+      });
+    },
+  },
+  mounted() {
+    this.go();
   },
 };
 </script>
