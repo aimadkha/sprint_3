@@ -4,11 +4,12 @@
     class="container-fluid d-flex jusctidy-content-center align-items-center"
   >
     <div id="intro__content" class="container w-80 col-sm-8 col-lg-5">
-      <h1 id="intro__heading" class="line animate__animated animate__backInUp">
+      <h1 data-aos="fade-down" id="intro__heading" class="text-white">
         {{ fullName }}
       </h1>
       <div id="intro__line" class="w-80 bg-white my-5"></div>
-      <p class="h1 text-white animate__animated animate__backInDown">
+      
+      <p data-aos="fade-up" class="h1 text-white">
         {{ job }}
       </p>
     </div>
@@ -21,8 +22,8 @@ export default {
   name: "intro",
   data() {
     return {
-      fullName: "Aimad Elkhattabi",
-      job: "Web Devloper",
+      fullName: "Hugo Bollon",
+      job: "Full-Stack Developer",
     };
   },
   methods: {
@@ -44,10 +45,18 @@ export default {
 </script>
 
 <style>
+body {
+  padding: 1.3rem;
+}
 #intro {
   width: 100vw;
-  height: 100vh;
-  background-image: url(../assets/bg.jpg);
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.795),
+      rgba(40, 180, 133, 0.801)
+    ),
+    url(../assets/bg.jpg);
   background-position: top left;
   background-size: 100% 100%;
 }

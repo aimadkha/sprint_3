@@ -1,4 +1,5 @@
 <template>
+
   <div id="form_container" class="container w-25 bg-light p-5">
     <h1>Sign In</h1>
     <form v-on:submit="checkEmail()">

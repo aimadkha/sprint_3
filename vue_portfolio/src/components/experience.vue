@@ -101,8 +101,12 @@ export default {
 
 <style>
 #experience {
-  background-color: #424242;
-  /* height: calc(100vh - 4rem); */
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.795),
+      rgba(40, 180, 133, 0.801)
+    ),
+    url(../assets/bg.jpg);
 }
 #experience__line {
   height: 3px;

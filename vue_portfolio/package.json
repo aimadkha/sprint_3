@@ -10,11 +10,15 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@fortawesome/vue-fontawesome": "^2.0.2",
+    "@growthbunker/vuetimeline": "^0.1.17",
     "animate.css": "^4.1.1",
     "animejs": "^3.2.1",
+    "aos": "^2.3.4",
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.6.5",
+    "simple-vue-timeline": "^2.0.8",
+    "timeline-vuejs": "^1.1.7",
     "vue": "^2.6.11",
     "vue-animate-onscroll": "^1.0.8",
     "vue-router": "^3.2.0"
